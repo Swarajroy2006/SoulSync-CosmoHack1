@@ -9,9 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-/* ============================
-   Gemini Initialization
-============================ */
+
 if (!process.env.KEY) {
   throw new Error("API KEY missing in .env file");
 }
@@ -23,9 +21,6 @@ const model = genAI.getGenerativeModel({
   model: "gemini-2.5-flash"
 });
 
-/* ============================
-   Crisis Detection
-============================ */
 const crisisKeywords = [
   "suicide",
   "kill myself",
@@ -36,9 +31,6 @@ const crisisKeywords = [
   "no reason to live"
 ];
 
-/* ============================
-   API Route
-============================ */
 app.post("/ask", async (req, res) => {
   try {
     const { question } = req.body;
@@ -50,7 +42,6 @@ app.post("/ask", async (req, res) => {
       });
     }
 
-    /* ----- CRISIS INTERCEPT ----- */
     const isCrisis = crisisKeywords.some(word =>
       question.toLowerCase().includes(word)
     );
@@ -71,8 +62,6 @@ If possible, talk to someone you trust right now.
 `
       });
     }
-
-    /* ----- SYSTEM PROMPT ----- */
     const systemPrompt = `
 You are a mental health support assistant.
 You are NOT a therapist or medical professional.
@@ -89,16 +78,12 @@ Safety rules:
 - Never encourage self-harm
 - Never claim to replace therapy
 `;
-
-    /* ----- USER PROMPT ----- */
     const userPrompt = `
 User message:
 "${question}"
 
 Respond as a supportive mental health companion.
 `;
-
-    /* ----- GEMINI CALL ----- */
     const result = await model.generateContent({
       contents: [
         {
@@ -130,9 +115,6 @@ Respond as a supportive mental health companion.
   }
 });
 
-/* ============================
-   Server Start
-============================ */
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

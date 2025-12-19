@@ -1,10 +1,48 @@
+{
+  /* <BlobCursor
+  blobType="circle"
+  fillColor="#5227FF"
+  trailCount={3}
+  sizes={[60, 125, 75]}
+  innerSizes={[20, 35, 25]}
+  innerColor="rgba(255,255,255,0.8)"
+  opacities={[0.6, 0.6, 0.6]}
+  shadowColor="rgba(0,0,0,0.75)"
+  shadowBlur={5}
+  shadowOffsetX={10}
+  shadowOffsetY={10}
+  filterStdDeviation={30}
+  useFilter={true}
+  fastDuration={0.1}
+  slowDuration={0.5}
+  zIndex={100}
+/> */
+}
+
+{
+  /* <motion.div
+        whileHover={{
+          scale: 1.1,
+          transition: {
+            duration: 0.1,
+          },
+        }}
+        transition={{ duration: 0.5 }}
+        onClick={() => navigate("/chat")}
+        className="absolute w-20 h-20 flex items-center justify-center rounded-2xl bottom-20 right-20 border border-gray-400 cursor-pointer bg-neutral-900"
+      >
+        <MessageCircle color="white" />
+      </motion.div> */
+}
+
+
+
 import React from 'react'
 import axios from "axios";
 import { useState } from 'react';
 import { Route , Routes, useNavigate} from "react-router-dom";
 import App from '../App';
 import { House } from 'lucide-react';
-import { ArrowBigUp } from 'lucide-react';
 
 
 const Chat = () => {
@@ -36,33 +74,31 @@ const Chat = () => {
 
   return (
     <div className="h-screen w-screen bg-neutral-800 flex justify-center items-center relative">
-      <div className="h-[750px] w-[1000px] rounded-2xl  text-white flex flex-col relative">
-        <div className="h-10 rounded-2xl flex justify-center items-center px-5 text-3xl">
+      <div className="h-[700px] w-[1000px] rounded-2xl border-2 text-white relative">
+        <div className="h-10 rounded-2xl flex items-center px-5 font-semibold">
           Chat Bot
         </div>
 
-        <div className="">
+        <div className="grid grid-cols-[35%_auto] gap-2 h-[350px]">
           {/* Left */}
-          <form onSubmit={handleSubmit} className="ml-2 flex flex-col absolute bottom-10 right-10 left-10">
-            <div >
-              <input
+          <form onSubmit={handleSubmit} className="ml-2 flex flex-col">
+            <input
               value={ques}
               onChange={(e) => setQues(e.target.value)}
-              className="px-10 w-full py-5  bg-neutral-700 rounded-3xl p-3 resize-none relative"
+              className="h-[270px] border-2 rounded-xl p-3 resize-none fixed left-0 right-0 bottom-0"
               placeholder="How can I help you..."
             />
 
             <button
               disabled={loading}
-              className="bg-white text-white mt-2 absolute px-5 py-3 rounded-4xl disabled:opacity-50 right-2"
+              className="bg-black text-white mt-2 px-3 py-1 rounded-xl disabled:opacity-50"
             >
-              <ArrowBigUp  color='black'/>
+              {loading ? "Generating..." : "Generate"}
             </button>
-            </div>
           </form>
 
           {/* Right */}
-          <div className=" rounded-xl mr-2 p-4 overflow-y-auto absolute top-30 left-10 right-10">
+          <div className="border-2 rounded-xl mr-2 p-4 overflow-y-auto">
             {loading && <p className="text-gray-500">Loading response...</p>}
 
             {error && <p className="text-red-500">{error}</p>}
