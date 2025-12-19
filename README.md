@@ -7,23 +7,59 @@ It helps users express emotions safely, track emotional state changes over time,
 > ⚠️ Soul Sync is **not a medical or therapeutic service**.  
 > It provides **supportive, non-clinical guidance only**.
 
+---
+
+##  Problem Statement
+
+**Tracking Emotional State Changes Using AI-Assistant Dialogue Analysis**
+
+Many individuals—especially students—struggle to express emotions due to stigma or lack of safe spaces. Soul Sync addresses this by providing a private, judgment-free AI companion that listens, summarizes emotions, and highlights patterns without storing sensitive raw data.
+
+---
 
 
-# AI-ML Cosmo
 
-Mental health companion with a Gemini-powered backend and a Vite React frontend. The app presents a stylized landing page and a chat experience that offers supportive, non-clinical responses while detecting crisis phrases and surfacing hotline information.
+##  Key Features
 
-## Features
-- Empathetic responses generated via Gemini with clear non-clinical positioning
-- Crisis phrase interception that routes users to helplines instead of the model
-- Simple chat UI with loading and error handling
-- Animated landing visuals built with Motion, GSAP, and custom light rays
-- Express server with CORS and JSON handling
+- 💬 Safe AI-powered emotional conversations  
+- 📊 Emotional trend tracking using summaries  
+- 🚨 Hybrid distress detection (rules + AI scoring)  
+- 🔐 Privacy-first design (no raw chat storage)  
+- 👥 Trusted-contact alert system (demo mode)  
+- 📈 User dashboard for insights & mood trends  
 
-## Tech Stack
-- Frontend: React 19, Vite, Motion, GSAP, Tailwind CSS 4
-- Backend: Express 5, @google/generative-ai
-- Tooling: ESLint 9, React Router 7
+---
+
+##  Tech Stack
+
+### 🔹 Frontend
+- React.js  
+- HTML5  
+- CSS3  
+- JavaScript (ES6+)  
+- Tailwind CSS  
+
+### 🔹 Backend & API
+- Node.js  
+- Express.js  
+
+### 🔹 AI / ML
+- Google **Gemini API** (conversation & summarization)
+- Hybrid distress detection:
+  - Rule-based keyword logic  
+  - AI emotional scoring (0–100)
+
+### 🔹 Database & Auth
+- Firebase Firestore (NoSQL)
+- Firebase Authentication (Google OAuth)
+
+### 🔹 Privacy & Security
+- Summary-based memory (no raw emotional chats stored)
+- User-controlled data deletion
+- Demo-only alert system
+- No medical advice or diagnosis
+
+---
 
 ## Project Structure
 ```bash
@@ -39,6 +75,7 @@ AI-ML-cosmo/
 │   └── package.json
 └── README.md
 ```
+---
 
 ## Prerequisites
 - Node.js 18+ (recommended)
@@ -79,3 +116,38 @@ AI-ML-cosmo/
 
 ## Safety Disclaimer
 This app is a supportive companion, not a therapist or medical professional. It does not provide diagnoses or emergency services. For urgent needs, contact local emergency numbers or crisis lines immediately.
+
+---
+
+
+## 👥 Contributors (Cosmic Hackers Team)
+
+<table>
+  <tr>
+	 <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/your-github-id?v=4" width="100"><br>
+      <b>Joyjit Karmakar</b><br>
+      Team Leader
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/swarajroy2006?v=4" width="100"><br>
+      <b>Swaraj Roy</b><br>
+      Team Member
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/your-github-id?v=4" width="100"><br>
+      <b>Saptanshu Roy</b><br>
+      Team Member
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/your-github-id?v=4" width="100"><br>
+      <b>Anik Bhaumik</b><br>
+      Team Member
+    </td>
+  </tr>
+</table>
+
+
+
+---
+
