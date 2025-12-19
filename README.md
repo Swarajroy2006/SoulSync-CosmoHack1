@@ -1,4 +1,7 @@
 # 🌌 Soul Sync  
+
+![Hackathon](https://img.shields.io/badge/Hackathon-COSMO%201%20HACK%201-purple)
+
 ### *Where your feelings find a voice*
 
 Soul Sync is an **AI-powered emotional wellness companion** built during **COSMO 1 HACK 1 (AI/ML Track)**.  
@@ -118,8 +121,14 @@ AI-ML-cosmo/
 This app is a supportive companion, not a therapist or medical professional. It does not provide diagnoses or emergency services. For urgent needs, contact local emergency numbers or crisis lines immediately.
 
 ---
+## 📸 Demo & Screenshots
+- ##### 🖼️ Application Screenshots
+![Login Screen](README/Application%20Screenshots.jpg)
 
+- #####	 AI Chat Interface
+![Login Screen](README/AI%20Chat%20Interface.jpg)
 
+---
 ## 👥 Contributors (Cosmic Hackers Team)
 
 <table>
@@ -130,24 +139,44 @@ This app is a supportive companion, not a therapist or medical professional. It 
       Team Leader
     </td>
     <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/swarajroy2006?v=4" width="100"><br>
-      <b>Swaraj Roy</b><br>
+      <a href="https://github.com/Swarajroy2006">
+        <img src="https://avatars.githubusercontent.com/u/97305683?v=4" width="100"><br>
+        <b>Swaraj Roy</b>
+      </a><br>
       Team Member
     </td>
     <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/your-github-id?v=4" width="100"><br>
+      <img src="https://avatars.githubusercontent.com/u/216073437?v=4" width="100"><br>
       <b>Saptanshu Roy</b><br>
       Team Member
     </td>
     <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/your-github-id?v=4" width="100"><br>
+      <img src="https://avatars.githubusercontent.com/u/?v=4" width="100"><br>
       <b>Anik Bhaumik</b><br>
       Team Member
     </td>
   </tr>
 </table>
 
-
-
 ---
 
+## 📂 Installation & Setup
+
+```bash
+git clone https://github.com/your-repo/soul-sync.git
+cd soul-sync
+npm install
+npm start
+```
+
+---
+## 📄 License
+
+- This project is licensed under the MIT License.
+
+- ![License](https://img.shields.io/badge/License-MIT-success)
+
+---
+## ❤️ Final Note
+
+>  Soul Sync focuses on emotional awareness, privacy, and ethical AI, encouraging users to seek real human connection when it matters most.
