@@ -60,6 +60,10 @@ if (!process.env.JWT_SECRET || process.env.JWT_SECRET === 'your-secret-key' || p
   throw new Error("JWT_SECRET must be set to a strong secret value in .env file");
 }
 
+if (!process.env.JWT_SECRET || process.env.JWT_SECRET === 'your-secret-key' || process.env.JWT_SECRET === 'your-super-secret-jwt-key-change-in-production') {
+  throw new Error("JWT_SECRET must be set to a strong secret value in .env file");
+}
+
 const genAI = new GoogleGenerativeAI(process.env.KEY);
 
 // Use a supported + stable model
